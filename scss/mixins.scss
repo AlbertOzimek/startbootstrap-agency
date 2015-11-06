@@ -1,22 +1,22 @@
 // Bootstrap Button Variant
 
-@mixin button-variant($color; $background; $border) {
-	color: $color;
-	background-color: $background;
-	border-color: $border;
+@mixin button-variant() {
+    $color: white;
+    $background: $brand-primary;
+    $border: $brand-primary;
 
 	&:hover,
 	&:focus,
 	&:active,
 	&.active,
-	.open .dropdown-toggle& {
+	.open {
 		color: $color;
 		background-color: darken($background, 10%);
         border-color: darken($border, 12%);
 	}
 	&:active,
 	&.active,
-	.open .dropdown-toggle& {
+	.open {
 		background-image: none;
 	}
 	&.disabled,

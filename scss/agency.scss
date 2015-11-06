@@ -1,5 +1,5 @@
-@import "variables.less";
-@import "mixins.less";
+@import "variables";
+@import "mixins";
 
 // Global Components
 
@@ -64,13 +64,13 @@ h1, h2, h3, h4, h5, h6 {
 // Restyled Primary Buttons
 
 .btn-primary {
-	@include button-variant(white; $brand-primary; $brand-primary);
+	@include button-variant();
 	@include heading-font;
 	font-weight: 700;
 }
 
 .btn-xl {
-	@include button-variant(white; $brand-primary; $brand-primary);
+	@include button-variant();
 	@include heading-font;
 	font-weight: 700;
 	border-radius: 3px;
@@ -94,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
         }
 	}
 	.navbar-collapse {
-		border-color: fade(white, 2%);
+		border-color: $brand-primary;
 	}
 	.navbar-toggle {
 		background-color: $brand-primary;
@@ -163,7 +163,6 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
 	background-image: url('../img/header-bg.jpg');
-	background-repeat: none;
 	background-attachment: scroll;
 	background-position: center center;
 	@include background-cover;
